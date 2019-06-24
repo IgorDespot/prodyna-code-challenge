@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title text-center">
+                Create new Post
+            </h5>
+            <div class="card-text">
+                <form (ngSubmit)="onSubmit(postForm)" #postForm="ngForm">
+                    <div class="form-group">
+                        <label for="title">Post Title</label>
+                        <input ngModel type="text" #title="ngModel" class="form-control" name="title" id="title"
+                            placeholder="Enter post title" required />
+                        <div *ngIf="!title.valid && title.touched">
+                            <small class="text-danger ml-2">Post title is required</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="postBody">Post Body</label>
+                        <textarea ngModel #body="ngModel" name="body" class="form-control" id="postBody" rows="3"
+                            placeholder="Enter post body" required></textarea>
+                        <div *ngIf="!body.valid && body.touched">
+                            <small class="text-danger ml-2">Post body is required</small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="userId">User ID</label>
+                        <input type="number" name="userId" id="userId" ngModel class="form-control"
+                            placeholder="Enter User ID">
+                    </div>
+                    <br>
+                    <button [disabled]='!postForm.valid' type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div *ngIf="created" class="alert alert-success text-center" role="alert">
+        New Post successfuly created.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" (click)="closeAlert()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+</div>

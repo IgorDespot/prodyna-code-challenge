@@ -1,0 +1,35 @@
+<div class="container" >
+    <div class="row justify-content-start">
+        <div class="col-lg-4 col-sm-12">
+            <div class="form-group">
+                <input type="text" class="fa form-control" placeholder="&#xF002; Search" name="titleFilter"
+                    [(ngModel)]="titleFilter" />
+            </div>
+        </div>
+    </div>
+    <div style="height: 700px; overflow:auto;" (scroll)="scrollHandle($event)">
+        <ng-container *ngIf="!isFetching" >
+            <div  class="card mb-1" *ngFor="let post of fetchedPosts | searchPipe:titleFilter; let idx = index " >
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-10">
+                            <h5 class="text-center">{{post.title}}</h5>
+                        </div>
+                        <div class="col-2">
+                            <button class="btn btn-secondary" (click)="toggleContent(idx)">
+                                <i [ngClass]="arrowIcon" aria-hidden="true"></i>
+                            </button>
+                            <button class="btn btn-danger" (click)="deletePost(post.id, idx)">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="body" *ngIf="visible === idx">
+                    <p class="text-justify px-2 py-2">{{post.body}}</p>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    
+</div>
