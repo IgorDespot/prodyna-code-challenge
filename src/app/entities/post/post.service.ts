@@ -16,7 +16,7 @@ export class PostService {
     constructor(private httpClient: HttpClient) { }
 
     getAllPosts(page): Observable<Post[]> {
-        return this.httpClient.get<Post[]>(`https://jsonplaceholder.typicode.com/posts?_page=${page}&_limit=20`);
+        return this.httpClient.get<Post[]>(this.postsURL + `?_page=${page}&_limit=20`);
     }
 
     deletePost(id: number) {
@@ -28,7 +28,6 @@ export class PostService {
     }
 
     createPost(post: Post) {
-        console.log(post)
         return this.httpClient.post(this.postsURL, post);
     }
 }

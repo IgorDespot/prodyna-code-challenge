@@ -52,7 +52,6 @@ export class PostsComponent implements OnInit {
   }
 
   private onSuccess(data) {
-    console.log(data)
     this.page += 1;
     this.fetchedPosts = data;
   }
@@ -79,10 +78,6 @@ export class PostsComponent implements OnInit {
   }
 
   private onDeleteError() { }
-
-  onPostAdded(post) {
-    // Would handle post adding for cross component
-  }
 
   toggleContent(idx) {
     if (this.visible === idx) {
