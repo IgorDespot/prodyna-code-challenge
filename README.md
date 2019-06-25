@@ -92,10 +92,13 @@ When creating new Post **posted`** is being generated as a random number between
 
 To simulate post adding I should have used cross-component communication and event emitting just for purpose of showing but decided to split them for better visual representation if proper API used there would be no issues with my approach.
 
+Documentation this code have no proper documentation, i made trade with implementing core features over documentation due to lack of time.
+
 
 #### Production
 
 This code is not production ready, it lacks monitoring and proper logging some of these aspects are not met from my side due to the time limit but also to my experience with some of its aspects.
+
 
 Thanks for this opportunity it was a pleasure to practice skills while also learning new things.
 
