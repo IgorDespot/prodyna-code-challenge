@@ -1,4 +1,4 @@
-# <a name="top"></a>Prodyna Code Challenge
+# Prodyna Code Challenge
 
 This project is made as part of an interview for Javascript developer position in Prodyna, it is being built using Angular 2+ providing a graphical interface for features required by the task.
 Using this interface, the user can do several operations:
@@ -9,12 +9,12 @@ Using this interface, the user can do several operations:
 * Spinner is added for service calls.
 
 ### Content
-* [Technology Description](technology-description)
-* [Project]()
-  * [Structure]()
-  * [Solutions]()
-  * [Issues]()
-* [Production]()
+* [Technology Description](#technology-description)
+* [Project](#project)
+  * [Structure](#structure)
+  * [Solutions](#solutions)
+  * [Issues](#issues)
+* [Production](#production)
   
 ## Technology Description
 
@@ -22,7 +22,6 @@ Using this interface, the user can do several operations:
 
 **`Bootstrap`** was used for styling and general look of this project.
 
-[Top](prodyna-code-challenge)
 
 ## Project
 
@@ -69,7 +68,6 @@ These components could be put in root of app but that would not be good solution
 ##### Util folder
 Util folder containes logic or component that can be used in any part of project an are not related to certian specific aspects. Hrere I created pipe used for **` search filter`** and **`error-page`** component used when user mistake route.
 
-[Top](prodyna-code-challenge)
 
 #### Solutions
 1. List all the posts, every post should be and expandable.
@@ -85,7 +83,6 @@ Util folder containes logic or component that can be used in any part of project
 6. Infinitive scroll
 * This was implemented using **`HostListener`** witch created event **`scroll`** that was called once we started scrolling on div taking and calculating its heigth and once we come to bottom of div then service is called and 20 more entities are being added etc...
 
-[Top](prodyna-code-challenge)
 
 #### Issues
 
@@ -104,6 +101,5 @@ Thanks for this opportunity it was a pleasure to practice skills while also lear
 
 LinkedIn: https://www.linkedin.com/in/despotigor/
 
-[Top](prodyna-code-challenge)
 
 
